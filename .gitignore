@@ -1,0 +1,8 @@
+# OS Specific
+.DS_Store
+
+# NPM
+node_modules
+npm_error.log
+
+
