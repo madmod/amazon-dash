@@ -6,37 +6,33 @@ module.exports = {
     {
       name: 'Button 1',
       mac: '74:c2:46:a7:4d:02',
-      action: 'Turn on monitors'
+      action: 'dash-button-1-pushed'
     },
     {
       name: 'Button 2',
-      mac: '02:0f:b5:a7:4d:02',
-      action: 'Doorbell'
+      mac: '10:ae:60:e9:89:17',
+      action: 'dash-button-2-pushed'
     }
   ],
   actions: [
     {
-      name: 'Turn on monitors',
-      plugin: 'ifttt',
-      options: {
-        event: 'turn_on_monitors'
-      }
+      name: 'dash-button-1-pushed',
+      plugin: 'mqtt'
     },
     {
-      name: 'Doorbell',
-      plugin: 'pushover',
-      options: {
-        users: 'all',
-        title: 'Doorbell',
-        message: 'Someone rang the doorbell!',
-        sound: 'magic'
-      }
+      name: 'dash-button-2-pushed',
+      plugin: 'mqtt'
     }
   ],
   plugins: [
     {
       name: 'ifttt',
       key: 'cp59SfExRXOmbs4yGjqxxl'
+    },
+    {
+      name: 'mqtt',
+      broker: 'server.local',
+      topic: 'amazon-dash'
     },
     {
       name: 'pushover',

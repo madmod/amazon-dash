@@ -9,6 +9,7 @@
     "debug": "^2.2.0",
     "lodash": "^3.10.1",
     "macvendor": "^0.1.1",
+    "mqtt": "^1.5.0",
     "node-hue-api": "^1.1.1",
     "pcap": "^2.0.1",
     "pushover-notifications": "^0.2.2",
